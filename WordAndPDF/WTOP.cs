@@ -68,12 +68,12 @@ namespace WordAndPDF
 
 
 
-                string SaveStr = @"C:\Users\Administrator\Desktop\" + FileName + ".pdf";
+                string SaveStr = @"D:\" + FileName + ".pdf";
 
                 try
                 {  //保存为PDF文件，此处的SaveFormat支持很多种格式，如图片，epub,rtf 等等
                     doc.Save(SaveStr, SaveFormat.Pdf);
-                    string message = @"成功在C:\Users\Administrator\Desktop\" + "生成文件→" + FileName + ".pdf";
+                    string message = @"成功在D:\" + "生成文件→" + FileName + ".pdf";
                     DialogResult dr = MessageBox.Show(message);
                     if (dr == DialogResult.OK)
                     {

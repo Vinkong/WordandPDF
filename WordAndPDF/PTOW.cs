@@ -68,12 +68,12 @@ namespace WordAndPDF
                 string FileName = Path.GetFileNameWithoutExtension(FilePath);//这个就是获取文件名的
                 PdfDocument doc = new PdfDocument();
                 doc.LoadFromFile(FilePath);//pdf物理路径
-                string SaveStr = @"C:\Users\Administrator\Desktop\" + FileName + ".docx";
+                string SaveStr = @"D:\" + FileName + ".docx";
 
                 try
                 {
                     doc.SaveToFile(SaveStr, FileFormat.DOCX);//生成word的物理路径
-                    string message = @"成功在C:\Users\Administrator\Desktop\" + "生成文件→" + FileName + ".docx";
+                    string message = @"成功在D:\" + "生成文件→" + FileName + ".docx";
                     DialogResult dr = MessageBox.Show(message);
                     if (dr == DialogResult.OK)
                     {
